@@ -26,16 +26,7 @@ input.addEventListener("input", (e) => {
   let currentX = 0;
   let colorArgCount = 0
   for (let index in splitedCommand) {
-    index = Number(index);
     const arg = splitedCommand[index];
-    if(!Number.isFinite(arg) && !Number.isFinite(splitedCommand[index + 1]) && !Number.isFinite(splitedCommand[index + 2])) {
-      splitedCommand.splice(
-        index,
-        3,
-        arg + " " + splitedCommand[index + 1] + " " + splitedCommand[index + 2]
-      );
-      console.log(splitedCommand);
-    }
 
     if (noDecoration.includes(arg) || index == 0) {
       ctx.fillStyle = "#a8a8a8";
