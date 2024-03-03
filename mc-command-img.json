@@ -1,7 +1,52 @@
 {
     "noDecoration": [
+        "from",
+        "to",
         "replace",
         "normal",
-        "force"
+        "force",
+        "modify",
+
+        "ambient",
+        "block",
+        "hostile",
+        "master",
+        "music",
+        "neutral",
+        "player",
+        "record",
+        "voice",
+        "weather",
+
+        "align",
+        "anchored",
+        "as",
+        "at",
+        "facing",
+        "in",
+        "on",
+        "positioned",
+        "rotated",
+        "summon",
+        "if",
+        "unless",
+        "biome",
+        "blocks",
+        "data",
+        "dimension",
+        "entity",
+        "function",
+        "loaded",
+        "predicate",
+        "score",
+        "store",
+        "result",
+        "success",
+        "bossbar",
+        "storage",
+        "run",
+
+        "mount",
+        "dismount"
     ]
 }

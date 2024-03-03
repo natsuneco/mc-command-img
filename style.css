@@ -1,3 +1,5 @@
 #workCanvas {
-    
+    height: 3em;
+    background-color: #1a2638;
+    border-radius: 10px;
 }
