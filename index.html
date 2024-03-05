@@ -8,10 +8,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <input type="text" id="commandInput">
-    <canvas id="workCanvas"></canvas>
+    <header>
+        <h1>MC Command Img</h1>
+    </header>
+    <main>
+        <form onsubmit="return false;">
+            <div>
+                <label for="commandInput">コマンド</label>
+                <input type="text" id="commandInput">
+            </div>
+            <div class="checkbox-wrapper">
+                <div class="checkbox">
+                    <input type="checkbox" id="dropShadow">
+                    <label for="dropShadow">影</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="roundCorners">
+                    <label for="roundCorners">角丸</label>
+                </div>
+            </div>
+            <div class="result">
+                <output for="commandInput dropShadow roundCorners">
+                    <div class="canvasWrapper">
+                        <canvas id="workCanvas"></canvas>
+                    </div>
+                </output>
+                <button type="button">
+                    <span class="material-symbols-rounded">
+                        download
+                    </span>
+                    <span class="button-text">画像をダウンロード</span>
+                </button>
+                <button type="button">
+                    <span class="material-symbols-rounded">
+                        content_copy
+                    </span>
+                    <span class="button-text">画像をクリップボードにコピー</span>
+                </button>
+            </div>
+        </form>
+    </main>
     <script src="js/main.js"></script>
 </body>
 </html>
