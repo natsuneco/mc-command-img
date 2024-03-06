@@ -47,17 +47,10 @@ copyButton.addEventListener("click", () => {
     });
     navigator.clipboard.write([item])
     .then(() => {
-      copyButtonText.textContent = "コピーしました!";
-      window.setTimeout(() => {
-        copyButtonText.textContent = "画像をクリップボードにコピー";
-      }, 3000);
+      showCopyMessage(true);
     })
     .catch((error) => {
-      copyButtonText.textContent = "エラーが発生しました";
-      console.error(error);
-      window.setTimeout(() => {
-        copyButtonText.textContent = "画像をクリップボードにコピー";
-      }, 3000);
+      showCopyMessage(false);
     });
   });
 });
@@ -115,7 +108,7 @@ function parsePos(array) {
       const s = array[index + 1];
       const t = array[index + 2];
       if (
-        (Number(f) && Number(s) && Number(t)) ||
+        (Number(f) !== NaN && Number(s) !== NaN && Number(t) !== NaN) ||
         (f.startsWith("~") && s.startsWith("~") && t.startsWith("~")) ||
         (f.startsWith("^") && s.startsWith("^") && t.startsWith("^"))
       ) {
@@ -145,4 +138,15 @@ function createRoundRectPath(x, y, w, h, r) {
 function fillRoundRect(x, y, w, h, r) {
   createRoundRectPath(x, y, w, h, r);
   ctx.fill();
+}
+
+function showCopyMessage(status) {
+  if (status) {
+    copyButtonText.textContent = copyButton.dataset.successfulText;
+  } else {
+    copyButtonText.textContent = copyButton.dataset.failedText;
+  }
+  window.setTimeout(() => {
+    copyButtonText.textContent = copyButton.dataset.normalText;
+  }, 3000);
 }

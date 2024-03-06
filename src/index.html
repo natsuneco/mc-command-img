@@ -10,13 +10,13 @@
     <meta property="og:description" content="Minecraft(マイクラ)のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。生成した画像は、サイト制作や動画制作にご自由にお使いいただけます。">
     <meta property="og:url" content="https://natsuneco.github.io/mc-command-img/">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="サムネイル画像のURL">
+    <meta property="og:image" content="/img/ogp.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="なつねこの部屋">
     <meta name="twitter:card" content="summary_large_image"> 
     <meta name="twitter:site" content="@natsuneco_nico">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@
                         <span class="material-symbols-rounded">
                             content_copy
                         </span>
-                        <span class="button-text" id="copyButtonText">画像をクリップボードにコピー</span>
+                        <span class="button-text" id="copyButtonText" data-normal-text="画像をクリップボードにコピー" data-successful-text="コピーしました！" data-failed-text="エラーが発生しました">画像をクリップボードにコピー</span>
                     </button>
                 </div>
             </form>
@@ -89,6 +89,6 @@
     <footer>
         <p><small>&copy;&nbsp;2024&nbsp;<a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">なつねこ</a></small></p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.min.js"></script>
 </body>
 </html>
