@@ -2,6 +2,7 @@ name: auto-minify
 on: [push]
 jobs:
   auto-minify:
+    runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
       - uses: actions/checkout@v2
