@@ -4,53 +4,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC Command Img</title>
+    <meta name="description" content="Minecraft(マイクラ)のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。生成した画像は、サイト制作や動画制作にご自由にお使いいただけます。">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header>
-        <h1>MC Command Img</h1>
+        <h1>MC&nbsp;Command&nbsp;Img</h1>
     </header>
     <main>
-        <form onsubmit="return false;">
-            <div>
-                <label for="commandInput">コマンド</label>
-                <input type="text" id="commandInput">
-            </div>
-            <div class="checkbox-wrapper">
-                <div class="checkbox">
-                    <input type="checkbox" id="dropShadow">
-                    <label for="dropShadow">影</label>
+        <section class="app">
+            <form onsubmit="return false;">
+                <div>
+                    <label for="commandInput">コマンド</label>
+                    <input type="text" id="commandInput" placeholder="/type something here" spellcheck="false">
                 </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="roundCorners">
-                    <label for="roundCorners">角丸</label>
-                </div>
-            </div>
-            <div class="result">
-                <output for="commandInput dropShadow roundCorners">
-                    <div class="canvasWrapper">
-                        <canvas id="workCanvas"></canvas>
+                <div class="checkbox-wrapper">
+                    <div class="checkbox">
+                        <input type="checkbox" id="roundCorners" checked>
+                        <label for="roundCorners">角丸</label>
                     </div>
-                </output>
-                <button type="button">
-                    <span class="material-symbols-rounded">
-                        download
-                    </span>
-                    <span class="button-text">画像をダウンロード</span>
-                </button>
-                <button type="button">
-                    <span class="material-symbols-rounded">
-                        content_copy
-                    </span>
-                    <span class="button-text">画像をクリップボードにコピー</span>
-                </button>
+                    <div class="checkbox">
+                        <input type="checkbox" id="dropShadow">
+                        <label for="dropShadow">テキストの影</label>
+                    </div>
+                </div>
+                <div class="result">
+                    <output for="commandInput dropShadow roundCorners">
+                        <div class="canvasWrapper">
+                            <canvas id="workCanvas"></canvas>
+                        </div>
+                    </output>
+                    <button type="button" id="downloadButton">
+                        <span class="material-symbols-rounded">
+                            download
+                        </span>
+                        <span class="button-text">画像をダウンロード</span>
+                    </button>
+                    <button type="button" id="copyButton">
+                        <span class="material-symbols-rounded">
+                            content_copy
+                        </span>
+                        <span class="button-text" id="copyButtonText">画像をクリップボードにコピー</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="about">
+            <p>Minecraft&nbsp;(マイクラ)&nbsp;のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。</p>
+            <p>生成した画像は動画制作やサイト制作など自由に使ってOKです。投稿するときは、このサイトのリンクを貼ってくださると嬉しいです！</p>
+            <p>ソースコードやライセンスなどは<a href="https://github.com/natsuneco/mc-command-img">GitHub</a>にあります。開発記も見てね👇</p>
+        </section>
+        <section class="links">
+            <div class="linksWrapper">
+                <div class="link-card">
+                    <p>開発記はこちら</p>
+                    <a href="https://zenn.dev/articles/7248533c5afcb7" target="_blank" rel="noopener noreferrer">
+                        <img src="https://static.zenn.studio/images/logo.png" alt="Zennのロゴ" class="zenn-logo">
+                    </a>
+                </div>
+                <div class="link-card">
+                    <p>X&nbsp;(Twitter)&nbsp;フォローしてね</p>
+                    <a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">
+                        <img src="img/x.png" alt="X @natsuneco_nico">
+                    </a>
+                </div>
             </div>
-        </form>
+        </section>
     </main>
+    <footer>
+        <p><small>&copy;&nbsp;2024&nbsp;<a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">なつねこ</a></small></p>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,11 +4,19 @@ const roundCornersCheck = document.getElementById("roundCorners");
 const canvas = document.getElementById("workCanvas");
 const ctx = canvas.getContext("2d");
 
+const downloadButton = document.getElementById("downloadButton");
+const copyButton = document.getElementById("copyButton");
+const copyButtonText = document.getElementById("copyButtonText");
+
 let noDecoration;
 fetch("mc-command-img.json")
 .then(response => response.json())
-.then(json => noDecoration = json.noDecoration)
+.then((json) => {
+  noDecoration = json.noDecoration;
+  drawCommand();
+})
 .catch(error => {
+  window.alert("エラーが発生しました");
   console.error(error);
 });
 
@@ -20,7 +28,41 @@ canvas.height = fontSize + paddiing * 2;
 ctx.font = `${fontSize}px DotGothic16`;
 const spaceWidth = ctx.measureText(" ").width;
 
-commandInput.addEventListener("input", (e) => {
+commandInput.addEventListener("input", drawCommand);
+commandInput.addEventListener("change", drawCommand);
+dropShadowCheck.addEventListener("change", drawCommand);
+roundCornersCheck.addEventListener("change", drawCommand);
+
+downloadButton.addEventListener("click", () => {
+  let link = document.createElement("a");
+  link.href = canvas.toDataURL("image/png");
+  link.download = "command-img.png";
+  link.click();
+});
+
+copyButton.addEventListener("click", () => {
+  canvas.toBlob((blob) => {
+    const item = new ClipboardItem({
+      "image/png": blob
+    });
+    navigator.clipboard.write([item])
+    .then(() => {
+      copyButtonText.textContent = "コピーしました!";
+      window.setTimeout(() => {
+        copyButtonText.textContent = "画像をクリップボードにコピー";
+      }, 3000);
+    })
+    .catch((error) => {
+      copyButtonText.textContent = "エラーが発生しました";
+      console.error(error);
+      window.setTimeout(() => {
+        copyButtonText.textContent = "画像をクリップボードにコピー";
+      }, 3000);
+    });
+  });
+});
+
+function drawCommand() {
   const command = commandInput.value;
   const dropShadow = dropShadowCheck.checked;
   const roundCorners = roundCornersCheck.checked;
@@ -63,7 +105,7 @@ commandInput.addEventListener("input", (e) => {
 
     currentX += ctx.measureText(arg).width + spaceWidth;
   }
-});
+}
 
 function parsePos(array) {
   for (let index in array) {
