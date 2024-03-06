@@ -141,17 +141,6 @@ form .canvasWrapper {
     overflow-x: scroll;
 }
 
-/* Not useed */
-form .fade::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 4em;
-    background: linear-gradient(to right, transparent, 70%, white);
-}
-
 #workCanvas {
     height: 4em;
     filter: drop-shadow(0 2px 5px rgba(149, 149, 149, 0.4));
