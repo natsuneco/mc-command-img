@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC Command Img</title>
-    <meta name="description" content="Minecraft(マイクラ)のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。生成した画像は、サイト制作や動画制作にご自由にお使いいただけます。">
+    <meta name="description" content="This tool generates syntax-highlighted images of Minecraft commands, which can be downloaded or copied to the clipboard. ">
     <!-- OGP -->
     <meta property="og:title" content="MC Command Img">
-    <meta property="og:description" content="Minecraft(マイクラ)のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。生成した画像は、サイト制作や動画制作にご自由にお使いいただけます。">
-    <meta property="og:url" content="https://natsuneco.github.io/mc-command-img/">
-    <meta property="og:locale" content="ja_JP">
+    <meta property="og:description" content="This tool generates syntax-highlighted images of Minecraft commands, which can be downloaded or copied to the clipboard. ">
+    <meta property="og:url" content="https://natsuneco.github.io/mc-command-img/en/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_UK">
     <meta property="og:image" content="/mc-command-img/img/ogp.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="なつねこの部屋">
+    <meta property="og:site_name" content="Natsuneco's Room">
     <meta name="twitter:card" content="summary_large_image"> 
     <meta name="twitter:site" content="@natsuneco_nico">
     <!-- Stylesheets -->
@@ -30,17 +31,17 @@
         <section class="app">
             <form onsubmit="return false;">
                 <div>
-                    <label for="commandInput">コマンド</label>
+                    <label for="commandInput">Command</label>
                     <input type="text" id="commandInput" placeholder="/type something here" spellcheck="false">
                 </div>
                 <div class="checkbox-wrapper">
                     <div class="checkbox">
                         <input type="checkbox" id="roundCorners" checked>
-                        <label for="roundCorners">角丸</label>
+                        <label for="roundCorners">Rounded</label>
                     </div>
                     <div class="checkbox">
                         <input type="checkbox" id="dropShadow">
-                        <label for="dropShadow">テキストの影</label>
+                        <label for="dropShadow">Text Shadow</label>
                     </div>
                 </div>
                 <div class="result">
@@ -53,32 +54,26 @@
                         <span class="material-symbols-rounded">
                             download
                         </span>
-                        <span class="button-text">画像をダウンロード</span>
+                        <span class="button-text">Download image</span>
                     </button>
                     <button type="button" id="copyButton">
                         <span class="material-symbols-rounded">
                             content_copy
                         </span>
-                        <span class="button-text" id="copyButtonText" data-normal-text="画像をクリップボードにコピー" data-successful-text="コピーしました！" data-failed-text="エラーが発生しました">画像をクリップボードにコピー</span>
+                        <span class="button-text" id="copyButtonText" data-normal-text="Copy image to clipboard" data-successful-text="Copied!" data-failed-text="Error occurred">Copy image to clipboard</span>
                     </button>
                 </div>
             </form>
         </section>
         <section class="about">
-            <p>Minecraft&nbsp;(マイクラ)&nbsp;のコマンドをシンタックスハイライトした画像を生成し、ダウンロードしたりクリップボードにコピーしたりすることができるツールです。</p>
-            <p>生成した画像は動画制作やサイト制作など自由に使ってOKです。投稿するときは、このサイトのリンクを貼ってくださると嬉しいです！</p>
-            <p>ソースコードやライセンスなどは&nbsp;<a href="https://github.com/natsuneco/mc-command-img">GitHub</a>&nbsp;にあります。開発記も見てね👇</p>
+            <p>This tool generates syntax-highlighted images of Minecraft commands, which can be downloaded or copied to the clipboard. </p>
+            <p>The generated images can be used freely for video production, website production, and other purposes. When you post, I would appreciate it if you would include a link to this site!</p>
+            <p>Source code and other information is available on <a href="https://github.com/natsuneco/mc-command-img">GitHub</a>.</p>
         </section>
         <section class="links">
             <div class="linksWrapper">
                 <div class="link-card">
-                    <p>開発記はこちら</p>
-                    <a href="https://zenn.dev/articles/7248533c5afcb7" target="_blank" rel="noopener noreferrer">
-                        <img src="https://static.zenn.studio/images/logo.png" alt="Zennのロゴ" class="zenn-logo">
-                    </a>
-                </div>
-                <div class="link-card">
-                    <p>X&nbsp;(Twitter)&nbsp;フォローしてね</p>
+                    <p>Follow me!</p>
                     <a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">
                         <img src="/mc-command-img/img/x.png" alt="X @natsuneco_nico">
                     </a>
@@ -87,7 +82,7 @@
         </section>
     </main>
     <footer>
-        <p><small>&copy;&nbsp;2024&nbsp;<a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">なつねこ</a></small></p>
+        <p><small>&copy;&nbsp;2024&nbsp;<a href="https://twitter.com/natsuneco_nico" target="_blank" rel="noopener noreferrer">Natsuneco</a></small></p>
     </footer>
     <script src="/mc-command-img/js/main.min.js"></script>
 </body>
