@@ -12,15 +12,18 @@ a, a:visited {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     width: 100%;
+    padding: 20px 50px;
     background-color: white;
     box-shadow: rgba(149, 149, 149, 0.4) 0 0 5px;
 }
 
 h1 {
     margin: 0;
-    padding: 20px 50px;
     font-family: "DotGothic16", sans-serif;
 }
 
