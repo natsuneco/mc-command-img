@@ -5,6 +5,7 @@
 body {
     margin: 0;
     color: #37474F;
+    font-family: sans-serif;
 }
 
 a, a:visited {
@@ -266,7 +267,7 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
+    header {
         padding: 20px 30px;
     }
 
