@@ -23,7 +23,9 @@ Minecraft (マイクラ) のコマンドをシンタックスハイライトし�
 
 ### About
 This tool generates syntax-highlighted images of Minecraft commands, which can be downloaded or copied to the clipboard. 
-The generated images can be used freely for video production, website production, and other purposes.When you post, I would appreciate it if you would include a link to this site!
+The generated images can be used freely for video production, website production, and other purposes.When you post, I would appreciate it if you would include a link to this site!  
+
+I'm not responsible for any damage caused by this tool. Please use at your own risk.
 
 ### Used fonts
 - [M PLUS 1 Code](https://github.com/coz-m/MPLUS_FONTS) ([Open Font License](https://openfontlicense.org/))
