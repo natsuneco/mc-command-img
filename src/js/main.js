@@ -108,9 +108,10 @@ function parsePos(array) {
       const s = array[index + 1];
       const t = array[index + 2];
       if (
-        (Number(f) !== NaN && Number(s) !== NaN && Number(t) !== NaN) ||
+        (Number(f) && Number(s) && Number(t)) ||
         (f.startsWith("~") && s.startsWith("~") && t.startsWith("~")) ||
-        (f.startsWith("^") && s.startsWith("^") && t.startsWith("^"))
+        (f.startsWith("^") && s.startsWith("^") && t.startsWith("^")) ||
+        (f === "0" && s === "0" && t === "0")
       ) {
         array.splice(index, 3, array.slice(index, index + 3).join(" "));
       }
