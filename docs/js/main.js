@@ -9,7 +9,7 @@ const copyButton = document.getElementById("copyButton");
 const copyButtonText = document.getElementById("copyButtonText");
 
 let noDecoration;
-fetch("mc-command-img.json")
+fetch("/mc-command-img/mc-command-img.json")
 .then(response => response.json())
 .then((json) => {
   noDecoration = json.noDecoration;
