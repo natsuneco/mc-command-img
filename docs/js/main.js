@@ -16,7 +16,7 @@ fetch("/mc-command-img/mc-command-img.json")
   drawCommand();
 })
 .catch(error => {
-  window.alert("エラーが発生しました");
+  window.alert("エラーが発生しました\nError occurred");
   console.error(error);
 });
 
